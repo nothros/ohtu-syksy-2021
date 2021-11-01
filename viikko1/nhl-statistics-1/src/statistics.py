@@ -8,7 +8,6 @@ def sort_by_points(player):
 class Statistics:
     def __init__(self, PlayerReader):
         reader = PlayerReader
-
         self._players = reader.get_players()
 
     def search(self, name):
@@ -32,7 +31,8 @@ class Statistics:
             reverse=True,
             key=sort_by_points
         )
-
+        if len(sorted_players) < how_many:
+        	return sorted_players
         result = []
         i = 0
         while i <= how_many:

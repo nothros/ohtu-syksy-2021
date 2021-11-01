@@ -45,3 +45,9 @@ class testStatistics(unittest.TestCase):
         players = self.statistics.top_scorers(1)
 
         self.assertEqual(players[0].name, "Gretzky")   
+
+         
+    def test_top_scorers_palauttaa_kaikki_kun_luku_liian_suuri(self):
+        players = self.statistics.top_scorers(6)
+
+        self.assertEqual(len(players), 5)   
