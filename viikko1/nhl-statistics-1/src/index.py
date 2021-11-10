@@ -6,8 +6,8 @@ def main():
     PlayerReader("https://nhlstatisticsforohtu.herokuapp.com/players.txt")
     )
 
-    philadelphia_flyers_players = stats.team("PHI")
-    top_scorers = stats.top_scorers(10)
+    philadelphia_flyers_players = stats.team(100)
+    top_scorers = stats.top_scorers(12)
 
     print("Philadelphia Flyers:")
     for player in philadelphia_flyers_players:
